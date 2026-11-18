@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore internships by role, company, location, and domain.">
+  <title>Launchpad — Internship Board</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to internships</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#" aria-label="Launchpad home"><span class="brand-mark">L</span> launchpad<span class="brand-dot">.</span></a>
+      <nav aria-label="Main navigation">
+        <a class="nav-link active" href="#opportunities">Explore</a>
+        <a class="nav-link" href="#how-it-works">How it works</a>
+      </nav>
+      <a class="header-cta" href="#opportunities">Find your start <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT CHAPTER STARTS HERE</div>
+        <h1 id="hero-title">Find work that<br><span>moves you forward.</span></h1>
+        <p class="hero-copy">Real opportunities. Fresh perspectives. A first step that can change everything.</p>
+        <a class="hero-link" href="#opportunities">Explore open internships <span aria-hidden="true">↓</span></a>
+        <div class="hero-note"><span class="sparkle" aria-hidden="true">✳</span> Curated opportunities for curious minds</div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card">
+          <div class="art-card-top"><span>YOUR FUTURE, IN MOTION</span><span class="art-star">✳</span></div>
+          <div class="art-big">Make<br>your mark<span>.</span></div>
+          <div class="art-bottom"><span>LEARN · BUILD · GROW</span><span class="art-arrow">↗</span></div>
+        </div>
+        <div class="floating-tag tag-one">✨ New beginnings</div>
+        <div class="floating-tag tag-two">01 / 04 — Explore</div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Internship board highlights">
+      <div><strong id="result-count">8</strong><span>opportunities to explore</span></div>
+      <div><strong>04</strong><span>career pathways</span></div>
+      <div><strong>100%</strong><span>beginner-friendly listings</span></div>
+    </section>
+
+    <section class="opportunities section-wrap" id="opportunities" aria-labelledby="opportunities-title">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> MAKE YOUR MOVE</div>
+          <h2 id="opportunities-title">Open opportunities<span>.</span></h2>
+          <p class="section-copy">Find a place to learn, contribute, and do meaningful work.</p>
+        </div>
+        <div class="listing-label"><span class="live-dot"></span> LISTINGS UPDATED REGULARLY</div>
+      </div>
+
+      <form class="filters" id="filter-form" role="search">
+        <div class="search-field">
+          <label for="search-input">Search internships</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="search-input" name="q" type="search" placeholder="Role, company, or keyword…" autocomplete="off">
+        </div>
+        <div class="select-field">
+          <label for="domain-filter">Career domain</label>
+          <select id="domain-filter" name="domain">
+            <option value="all">All domains</option>
+            <option value="Technology">Technology</option>
+            <option value="Design">Design</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Business">Business</option>
+          </select>
+        </div>
+        <button class="clear-button" type="reset">Clear filters <span aria-hidden="true">↺</span></button>
+      </form>
+
+      <div class="results-line">
+        <p id="results-summary" aria-live="polite" aria-atomic="true">Showing all 8 opportunities</p>
+        <span class="sort-note">HAND-PICKED FOR YOUR NEXT STEP</span>
+      </div>
+      <div class="cards-grid" id="internship-list" aria-label="Internship results"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <div class="empty-icon" aria-hidden="true">⌕</div>
+        <h3>No matches just yet</h3>
+        <p>Try a different keyword or choose another career domain.</p>
+        <button class="button-primary" id="reset-empty" type="button">View all internships</button>
+      </div>
+      <div class="error-state" id="error-state" role="alert" hidden>
+        <strong>We couldn’t load the opportunities.</strong>
+        <p>Please refresh the page to try again.</p>
+        <button class="button-primary" id="retry-button" type="button">Try again</button>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="how-inner">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> SMALL STEPS, BIG THINGS</div>
+          <h2>Make your first<br><span>move count.</span></h2>
+        </div>
+        <div class="steps">
+          <article><span class="step-no">01</span><div><h3>Find your fit</h3><p>Explore roles that match your interests and the skills you want to grow.</p></div></article>
+          <article><span class="step-no">02</span><div><h3>Get curious</h3><p>Read the details, learn about the team, and see where you could contribute.</p></div></article>
+          <article><span class="step-no">03</span><div><h3>Take the leap</h3><p>Reach out through the application link and take your next step with confidence.</p></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">L</span> launchpad<span class="brand-dot">.</span></a>
+    <p>Good things start with one small step.</p>
+    <span>© <span id="year"></span> Launchpad Internship Board</span>
+  </footer>
+</body>
+</html>
